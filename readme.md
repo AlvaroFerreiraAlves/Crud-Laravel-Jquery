@@ -13,4 +13,5 @@ Depois de clonar este repositório, vá para a pasta raiz, execute os seguintes 
 - DB_PASSWORD=senha</br></br>
 <p>É preciso uma tabela de banco de dados para executar operações CRUD. Execute <b>php artisan migrate</b> para importar a tabela.</p>
 <p>Execute:</p>
-- php artisan key:generate
+- php artisan key:generate</br>
+- php artisan serve
