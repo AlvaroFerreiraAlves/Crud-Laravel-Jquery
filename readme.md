@@ -1,4 +1,4 @@
-## CRUD SIMPLES LARAVEL COM jQUERY
+## CRUD SIMPLES LARAVEL COM JQUERY
 
 Depois de clonar este repositório, vá para a pasta raiz, execute os seguintes comandos no terminal:
 
