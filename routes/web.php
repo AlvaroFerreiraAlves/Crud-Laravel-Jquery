@@ -13,13 +13,10 @@
 
 use Illuminate\Http\Request;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 
-Route::get('productajaxCRUD', 'ProductController@listar');
+Route::get('/', 'ProductController@listar');
 
 Route::get('productajaxCRUD/{product_id?}','ProductController@show');
 

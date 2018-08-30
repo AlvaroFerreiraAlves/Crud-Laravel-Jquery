@@ -1,5 +1,5 @@
 
-var url = "http://localhost:81/blog/public/productajaxCRUD";
+var url = "http://localhost:8000/productajaxCRUD";
 //display modal form for product editing
 $(document).on('click','.open_modal',function(){
     var product_id = $(this).val();
