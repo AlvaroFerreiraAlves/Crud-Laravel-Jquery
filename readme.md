@@ -4,7 +4,7 @@ Depois de clonar este repositório, vá para a pasta raiz, execute os seguintes 
 
 - composer install
 - composer update </br></br>
-Renomeie o arquivo .env.example para .env e forneça os detalhes do seu banco de dados:
+<p>Renomeie o arquivo .env.example para .env e forneça os detalhes do seu banco de dados:</p>
 - DB_CONNECTION=mysql
 - DB_HOST=localhost
 - DB_PORT=3306
