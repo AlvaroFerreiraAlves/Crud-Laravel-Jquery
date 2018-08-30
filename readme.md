@@ -1,9 +1,9 @@
 ## CRUD SIMPLES LARAVEL COM jQUERY
 
-Depois de clonar este repositório, vá para a pasta raiz, execute o seguinte comando:
+Depois de clonar este repositório, vá para a pasta raiz, execute os seguintes comandos no terminal:
 
 - composer install
-- composer update
+- composer update </br>
 Renomeie o arquivo .env.example para .env e forneça os detalhes do seu banco de dados:
 - DB_CONNECTION=mysql
 - DB_HOST=localhost
