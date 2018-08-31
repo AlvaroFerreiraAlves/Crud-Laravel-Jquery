@@ -20,8 +20,11 @@ Route::get('/', 'ProductController@listar');
 
 Route::get('productajaxCRUD/{product_id?}','ProductController@show');
 
-Route::post('productajaxCRUD','ProductController@store');
+Route::post('productajaxCRUD','ProductController@store')->middleware('auth');
 
 Route::put('productajaxCRUD/{product_id?}','ProductController@update');
 
 Route::delete('productajaxCRUD/{product_id?}','ProductController@destroy');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
