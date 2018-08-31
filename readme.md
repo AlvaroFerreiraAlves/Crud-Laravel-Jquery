@@ -15,3 +15,4 @@ Depois de clonar este repositório, vá para a pasta raiz, execute os seguintes 
 <p>Execute:</p>
 - php artisan key:generate</br>
 - php artisan serve
+<p>Vá para o navegador e coloque na barra de endereço:  <b>http://localhost:8000/</b> </p>
