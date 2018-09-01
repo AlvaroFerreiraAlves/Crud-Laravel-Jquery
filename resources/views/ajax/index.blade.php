@@ -1,13 +1,20 @@
-<html>
-<head>
-    <title>Laravel CRUD Application using Ajax without Reloading Page</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 <div class="container">
+
+ <div class="alert alert-danger collapse" role="alert" id="alert-login">
+  É necessário efetuar <a href="{{ route('login') }}">Login</a>
+</div>
+
     <div class="panel panel-primary">
-        <div class="panel-heading">Laravel CRUD Application using Ajax without Reloading Page
+  
+        <div class="panel-heading">Produtos
+        @if(Auth::check())
             <button id="btn_add" name="btn_add" class="btn btn-default pull-right">Add New Product</button>
+       @else
+       <button id="btn_add" name="btn_add" class="btn btn-default pull-right" onclick="alertLogin()">Add New Product</button>
+       @endif
         </div>
         <div class="panel-body">
             <table class="table">
@@ -68,27 +75,6 @@
     </div>
     @endif
 
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Product</h4>
-                </div>
-                <div class="modal-body">
-                   <h1>Efetuar Login</h1>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="btn-save" value="add">OK</button>
-                    <input type="hidden" id="product_id" name="product_id" value="0">
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </div>
-<meta name="_token" content="{!! csrf_token() !!}" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="{{asset('js/ajaxscript.js')}}"></script>
-</body>
-</html>
+@endsection
