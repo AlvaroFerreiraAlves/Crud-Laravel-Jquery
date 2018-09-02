@@ -11,7 +11,7 @@
   
         <div class="panel-heading">Produtos
         @if(Auth::check())
-            <button id="btn_add" name="btn_add" class="btn btn-default pull-right">Add New Product</button>
+            <button id="btn_add" name="btn_add" class="btn btn-default pull-right">Adicionar Produto</button>
        @else
        <button id="btn_add" name="btn_add" class="btn btn-default pull-right" onclick="alertLogin()">Add New Product</button>
        @endif
@@ -21,9 +21,11 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Details</th>
-                    <th>Actions</th>
+                    <th>Nome</th>
+                    <th>Detalhes</th>
+                    @if(Auth::check())
+                    <th>Ações</th>
+                    @endif
                 </tr>
                 </thead>
                 <tbody id="products-list" name="products-list">
@@ -33,8 +35,10 @@
                         <td>{{$product->name}}</td>
                         <td>{{$product->details}}</td>
                         <td>
+                        @if(Auth::check())
                             <button class="btn btn-warning btn-detail open_modal" value="{{$product->id}}">Edit</button>
                             <button class="btn btn-danger btn-delete delete-product" value="{{$product->id}}">Delete</button>
+                        @endif
                         </td>
                     </tr>
                 @endforeach

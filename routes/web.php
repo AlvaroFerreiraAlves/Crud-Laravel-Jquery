@@ -22,9 +22,9 @@ Route::get('productajaxCRUD/{product_id?}','ProductController@show');
 
 Route::post('productajaxCRUD','ProductController@store')->middleware('auth');
 
-Route::put('productajaxCRUD/{product_id?}','ProductController@update');
+Route::put('productajaxCRUD/{product_id?}','ProductController@update')->middleware('auth');
 
-Route::delete('productajaxCRUD/{product_id?}','ProductController@destroy');
+Route::delete('productajaxCRUD/{product_id?}','ProductController@destroy')->middleware('auth');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
